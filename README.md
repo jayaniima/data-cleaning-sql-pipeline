@@ -25,9 +25,6 @@ This project demonstrates reusable T-SQL functions, staging architecture, transf
 vmp-contact-cleansing/
 │
 ├── README.md
-├── config/
-│   ├── settings.sql
-│   ├── constants.sql
 │
 ├── staging/
 │   ├── 01_create_stage_table.sql
