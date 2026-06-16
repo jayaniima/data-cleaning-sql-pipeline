@@ -1,0 +1,4 @@
+UPDATE s
+SET AltNum = SUBSTRING(VMIN1, PATINDEX('%[0-9][0-9][0-9]%', VMIN1), 10)
+FROM dbo.VMP_Contacts_Stage s
+WHERE VMIN1 LIKE '%EXT%';
