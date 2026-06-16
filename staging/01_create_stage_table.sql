@@ -1,0 +1,19 @@
+USE Mapping;
+
+DROP TABLE IF EXISTS dbo.VMP_Contacts_Stage;
+
+SELECT 
+    VMVN#,
+    VMRNAM,
+    VMIN1,
+    VMIN2,
+    VMIN3,
+    VMIN4
+INTO dbo.VMP_Contacts_Stage
+FROM Company..VMP
+WHERE 
+    NULLIF(VMIN1,'') IS NOT NULL
+ OR NULLIF(VMIN2,'') IS NOT NULL
+ OR NULLIF(VMIN3,'') IS NOT NULL
+ OR NULLIF(VMIN4,'') IS NOT NULL;
+GO
